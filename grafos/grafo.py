@@ -15,4 +15,4 @@ def gerarGrafo():
         for coluna in range(len(matriz[0])):
             Vertice(matriz[linha][coluna], (linha, coluna))
     
-    return Vertice.VERTICES
+    return Vertice.VERTICES, Vertice 

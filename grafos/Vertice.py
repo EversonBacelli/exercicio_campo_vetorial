@@ -3,11 +3,13 @@ class Vertice:
     MATRIZ = []
     def __init__(self, valor, posicao):
         self.valor = valor
+        self.posicao = posicao
         self.visitado = False
         self.vizinhos = []
         self.posicaoVizinhos(posicao)
         Vertice.VERTICES.append(self)
-        self.distancia = self.distancia(posicao, [3,3])
+        self.scoreFeet = self.distancia(posicao, [3,3])
+        self.distancia = float('inf')
 
     def posicaoVizinhos(self, posicao):
         # direita
@@ -35,3 +37,13 @@ class Vertice:
     
     def distancia(self, posicao, alvo):
         return abs(posicao[0] - alvo[0]) + abs(posicao[1] - alvo[1])
+    
+    def colocarReferencias():
+        for vertice in Vertice.VERTICES:
+            v = vertice.vizinhos
+            vertice.vizinhos = []
+            for vizinho in v:
+                nos = Vertice.VERTICES
+                for no in nos:
+                    if vizinho == no.posicao:
+                        vertice.vizinhos.append(no)

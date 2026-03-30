@@ -19,4 +19,5 @@ def criar_matriz():
     matriz[3][1] = 3
     matriz[3][2] = 2
     matriz[3][3] = 1  
+    
     return matriz

@@ -1,8 +1,10 @@
 
 from grafos.grafo import gerarGrafo
-from grafos.Vertice import Vertice
 
-matriz = gerarGrafo()
+vertices, Vertice = gerarGrafo()
 
-for linha in matriz:
-    print(linha.valor,'  ', linha.distancia ,' ', linha.vizinhos)
+# for linha in matriz:
+#     print(linha.valor,'  ', linha.distancia ,' ', linha.vizinhos)
+
+Vertice.colocarReferencias()
+
